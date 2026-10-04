@@ -1,0 +1,36 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.swarm-agent-operator/swarm-x402-mcp",
+  "description": "Pay-per-call x402 services from SWARM: repo scans, web research. USDC on Base.",
+  "repository": {
+    "url": "https://github.com/swarm-agent-operator/swarm-x402-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "swarm-x402-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "SWARM_WALLET_KEY",
+          "isRequired": false,
+          "isSecret": true,
+          "format": "string",
+          "description": "Private key of a dedicated wallet with a little USDC on Base. Without it, tools only quote."
+        },
+        {
+          "name": "SWARM_MAX_USD",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string",
+          "description": "Refuse any call priced above this many dollars (default 1)."
+        }
+      ]
+    }
+  ]
+}
