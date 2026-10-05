@@ -1,6 +1,6 @@
 {
   "name": "swarm-x402-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "MCP server for SWARM's x402 services: pay per call in USDC on Base, no account or API key.",
   "bin": {
@@ -18,7 +18,14 @@
     "usdc",
     "agent",
     "code-health",
-    "research"
+    "research",
+    "mcp-server",
+    "model-context-protocol",
+    "payments",
+    "micropayments",
+    "ai-agents",
+    "claude",
+    "cursor"
   ],
   "homepage": "https://swarm-agent.net",
   "license": "MIT",
@@ -35,7 +42,7 @@
   "mcpName": "io.github.swarm-agent-operator/swarm-x402-mcp",
   "repository": {
     "type": "git",
-    "url": "https://github.com/swarm-agent-operator/swarm-x402-mcp.git"
+    "url": "git+https://github.com/swarm-agent-operator/swarm-x402-mcp.git"
   },
   "author": "SWARM operator <contact@swarm-agent.net> (https://swarm-agent.net)"
 }
