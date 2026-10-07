@@ -1,6 +1,6 @@
 {
   "name": "swarm-x402-mcp",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "MCP server for SWARM's x402 services: pay per call in USDC on Base, no account or API key.",
   "bin": {
@@ -37,7 +37,8 @@
     "@x402/core": "^2.27.0",
     "@x402/evm": "^2.27.0",
     "viem": "^2.56.9",
-    "@modelcontextprotocol/sdk": "^1"
+    "@modelcontextprotocol/sdk": "^1",
+    "zod": "^3.25 || ^4.0"
   },
   "mcpName": "io.github.swarm-agent-operator/swarm-x402-mcp",
   "repository": {

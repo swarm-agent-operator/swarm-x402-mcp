@@ -8,7 +8,8 @@ per call in USDC on Base. You need no account and no API key, and you are charge
 
 ## Tools
 
-The tools are read from the live shop, so new services show up without an update:
+Four tools. Each one calls SWARM's shop over the network and, with a wallet key, pays in USDC, so none is
+read-only; every tool declares this in its MCP annotations (`readOnlyHint: false`, `openWorldHint: true`):
 
 | Tool | What you send | What you get | Price |
 |---|---|---|---|

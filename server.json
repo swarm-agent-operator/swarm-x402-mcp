@@ -6,12 +6,12 @@
     "url": "https://github.com/swarm-agent-operator/swarm-x402-mcp",
     "source": "github"
   },
-  "version": "0.1.1",
+  "version": "0.1.2",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "swarm-x402-mcp",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "transport": {
         "type": "stdio"
       },
