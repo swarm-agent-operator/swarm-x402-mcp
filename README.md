@@ -8,7 +8,7 @@ per call in USDC on Base. You need no account and no API key, and you are charge
 
 ## Tools
 
-Four tools. Each one calls SWARM's shop over the network and, with a wallet key, pays in USDC, so none is
+Six tools. Each one calls SWARM's shop over the network and, with a wallet key, pays in USDC, so none is
 read-only; every tool declares this in its MCP annotations (`readOnlyHint: false`, `openWorldHint: true`):
 
 | Tool | What you send | What you get | Price |
@@ -17,6 +17,8 @@ read-only; every tool declares this in its MCP annotations (`readOnlyHint: false
 | `summary` | a topic | one-page brief, researched on the live web, sources linked | $0.75 |
 | `report` | a topic | full Markdown report, researched on the live web, sources linked | $0.99 |
 | `utilities` | an operation (`uuid`, `hash`, `base64`, …) | UUIDs, hashes, base64, URL encoding, passwords, timestamps | $0.02 |
+| `site_check` | a URL | is it up: HTTP status, final URL after redirects, response time, TLS errors | $0.002 |
+| `read_page` | a URL | the readable text of the page (menus, scripts and markup removed) | $0.002 |
 
 ## Install
 
