@@ -1,4 +1,4 @@
-[SKILL.md](https://github.com/user-attachments/files/33654082/SKILL.md)
+
 ---
 name: swarm-x402
 description: Pay-per-call web tools over x402 (USDC on Base) - check if a site is up, read a page as clean text, scan a GitHub repo, short or full web research, small utilities. No account, no API key.
