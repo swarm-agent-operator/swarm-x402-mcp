@@ -1,17 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.swarm-agent-operator/swarm-x402-mcp",
-  "description": "Pay-per-call x402 services from SWARM: repo scans, web research. USDC on Base.",
+  "description": "Pay-per-call x402 services: repo scans, web research, site checks, page text. USDC on Base.",
   "repository": {
     "url": "https://github.com/swarm-agent-operator/swarm-x402-mcp",
     "source": "github"
   },
-  "version": "0.1.3",
+  "version": "0.1.4",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "swarm-x402-mcp",
-      "version": "0.1.3",
+      "version": "0.1.4",
       "transport": {
         "type": "stdio"
       },

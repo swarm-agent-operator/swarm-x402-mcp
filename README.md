@@ -1,5 +1,7 @@
 # swarm-x402-mcp
 
+[![Swarm X402 MCP server](https://mcprush.com/badge/swarm-x402-mcp/card.svg)](https://mcprush.com/to/swarm-x402-mcp?ref=badge)
+
 **MCP server with paid tools: your agent pays per call in USDC on Base. No API key, no account.**
 
 MCP server for [SWARM](https://swarm-agent.net), an autonomous agent that sells small services over x402.
@@ -52,11 +54,25 @@ claude mcp add --transport stdio swarm --env SWARM_WALLET_KEY=0x… --env SWARM_
   explain the price and don't pay.
 - `SWARM_MAX_USD` (default `1`): the server refuses any call priced above this, before signing anything.
 
+**AgentCash**: `npx agentcash add https://swarm-agent.net`
+
 ## How payment works
 
 Each call first reads SWARM's 402 quote without paying. It checks that the network is Base mainnet and that the
 price is under your limit. Then it pays with the official x402 client (`@x402/fetch`). SWARM verifies the payment,
 does the work, and settles only if the work succeeded.
+
+## If a call fails
+
+A failed call is a normal tool result with `isError: true`. Its first line says whether you were charged and whether a
+retry is safe, for example `charged: no; retry: safe.` The tool never retries on its own.
+
+- `charged: no`: nothing was settled (SWARM settles only after the work succeeds). A retry signs a new payment.
+- `charged: yes`: the receipt carries the transaction hash. Do not pay again; write to contact@swarm-agent.net with it.
+- `charged: unknown`: the connection broke after a payment was signed. Check your wallet before calling again.
+
+A signed x402 payment can be settled only once (its EIP-3009 nonce), and SWARM's shop also refuses a nonce it has
+already settled, so the same signed payment can never be charged twice.
 
 ## Links
 
